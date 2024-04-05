@@ -1,0 +1,67 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image:url('images.jpg'); */
+}
+
+/* Header styles */
+/* display none -------------------------------------------------------------------->
+
+#imageUpload {
+  display: none;
+} */
+
+/* Content styles */
+.content {
+  width: 50%;
+  padding: 30px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#uploadContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btn {
+  background-color:black;
+  color: white;
+}
+#btn:hover{
+  background-color:green;
+  color: white;
+}
+
+#resultContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#resultText {
+  font-size: 18px;
+  color: #333;
+}

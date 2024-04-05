@@ -1,0 +1,170 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image:url('/src/assets/greens.jpg');
+  background-size : cover;
+}
+/* display none -------------------------------------------------------------------->
+
+#imageUpload {
+  display: none;
+} */
+
+/* Content styles */
+.content {
+  padding: 30px;
+  margin-top: 10px;
+  background-color:antiquewhite;
+  border-radius: 20px;
+  box-shadow: 10px 10px 50px rgba(11, 1, 1, 0.1);
+}
+
+/* Add these styles to your App.css file */
+
+/* Main container styles */
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/greens.jpg');
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: relative;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* Animated underline */
+h1::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color:black;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover::after {
+  transform: scaleX(1);
+}
+
+/* Glow effect */
+h1::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: glowing 2s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+#uploadContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#resultContainer {
+margin-right: 0px;
+  margin-top: 20px;
+}
+
+#resultText {
+  font-size: 18px;
+  color:BLACK;
+  
+}
+#imagePreviewContainer{
+  margin-left: 0px;
+}
+#ipc{
+  margin-top: 30px;
+   margin-left: 10px;
+}
+#imagePreview{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth image scaling */
+}
+#imagePreview:hover {
+  transform: scale(1.1); /* Hover effect to scale up */
+}
+/* Add these styles to your App.css file */
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading spinner container */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db; /* Blue color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Use the 'spin' animation */
+}
+
